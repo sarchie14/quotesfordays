@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zippy Used Autos</title>
+    <title>Quotes For Days</title>
     <link rel="stylesheet" type="text/css" href="view/css/main.css" />
 </head>
 
@@ -13,22 +13,6 @@
 <body>
     <header>
         <div id="pageTitle">
-            <h1>Zippy Used Autos</h1>
-        </div>
-        <div id="pageLinks">
-            <?php 
-                session_start();
-                if (!isset($_SESSION['userid'])) {
-            ?>
-                <p>
-                    <a href="register.php">Register</a>
-                </p>
-            <?php } else { 
-                $userid = $_SESSION['userid'];
-            ?>
-                <p>
-                    Welcome <?php echo $userid ?>! (<a href="logout.php">Sign Out</a>)
-                </p>
-            <?php } ?>
+            <h1>Quotes For Days</h1>
         </div>
     </header>
