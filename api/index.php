@@ -39,7 +39,21 @@ if($_SERVER['REQUEST_METHOD'] == "GET") {
   $statement->closeCursor();
 
   echo json_encode($result);
-  }else if(!empty(trim(filter_input(INPUT_GET, 'author_id'))) && !empty(trim(filter_input(INPUT_GET, 'category_id')))) {
+  }else if(empty(trim(filter_input(INPUT_GET, 'author_id'))) && !empty(trim(filter_input(INPUT_GET, 'category_id')))){
+    //Gets Quotes by category id
+    $category_id = trim(filter_input(INPUT_GET, 'category_id'));
+    global $db;
+    $query = 'SELECT * FROM quote
+              WHERE categoryID = :category_id
+              ORDER BY categoryID';
+    $statement = $db->prepare($query);
+    $statement->bindValue(':category_id', $category_id);
+    $statement->execute();
+    $result = $statement->fetchAll();
+    $statement->closeCursor();
+  
+    echo json_encode($result);
+    }else if(!empty(trim(filter_input(INPUT_GET, 'author_id'))) && !empty(trim(filter_input(INPUT_GET, 'category_id')))) {
     //Gets quotes by Author that are in a certain category
     $author_id = trim(filter_input(INPUT_GET, 'author_id'));
     $category_id = trim(filter_input(INPUT_GET, 'category_id'));
