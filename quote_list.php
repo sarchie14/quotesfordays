@@ -29,7 +29,7 @@
                 <div>
                     <!-- uses ternary if statements to determine checked or not -->
                     <input type="submit" value="Search" class="button blue button-slim">
-                    <input id="resetVehicleListForm" type="reset" class="button red button-slim">
+                    <input id="resetQuoteListForm" type="reset" class="button red button-slim">
                 </div>
             </section>
         </form>

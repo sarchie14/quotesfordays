@@ -1,5 +1,5 @@
 //////////////////////////// define functions 
-const resetVehicleListForm = () => {
+const resetQuoteListForm = () => {
     //reset select menus
     const selectMenuOptions = document.querySelectorAll("#make_selection select option");
     selectMenuOptions.forEach(option => {
@@ -20,7 +20,7 @@ const resetVehicleListForm = () => {
 }
 // call initialize function when script loads
 const init = () => {
-    document.getElementById("resetVehicleListForm").addEventListener("click", resetVehicleListForm);
+    document.getElementById("resetQuoteListForm").addEventListener("click", resetQuoteListForm);
 }
 //////////////////////////// end function definitions
 
