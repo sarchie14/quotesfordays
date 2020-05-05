@@ -16,7 +16,7 @@
                 session_start();
                 $_SESSION['is_valid_admin'] = true;
                 //go to admin home
-                header("Location: index.php");
+                header("Location: admin-index.php");
             } else {
                 $error_username = 'Username and password do not validate.';
             }
