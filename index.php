@@ -10,7 +10,7 @@
             $author_name = get_author_name($author_id);
             $category_name = get_category_name($category_id);
            
-        $quotes = get_all_quotes();
+            $quotes = get_all_quotes();
             // apply Author filter 
             if (!empty($author_name)) {
                 $quotes = array_filter($quotes, function($array) use ($author_name) {
