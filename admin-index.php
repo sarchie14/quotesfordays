@@ -7,7 +7,6 @@
     require('model/authors_db.php');
     require('model/categories_db.php');
 
-    //Null Coalescing Operator
     $action = filter_input(INPUT_POST, 'action') ?? filter_input(INPUT_GET, 'action') ?? 'list_quotes';
 
     switch ($action) {
@@ -19,8 +18,7 @@
             // ternary statement replaces the switch statement from previous solution
            // $sort = ($sort == "year") ? "year" : "price";
 
-            // *****new code block to use ALL filter options in any combination*****
-            // will also use these names to show selected options in menu
+
             $category_name = get_category_name($category_id);
             $author_name = get_author_name($author_id);
 
@@ -133,8 +131,8 @@
             header("Location: quotes-admin.php?action=list_categories");
             break;
         case 'logout':
-            $_SESSION = array();    //Clear all session data from memory
-            session_destroy();      //Clean up the session ID
+            $_SESSION = array();
+            session_destroy();
             header("Location: admin-login.php");
     }
 ?> 
