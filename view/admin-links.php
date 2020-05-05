@@ -5,5 +5,5 @@
     <p><a href="quotes-admin.php?action=list_authors">View/Edit Authors</a></p>
     <p><a href="quotes-admin.php?action=list_categories">View/Edit Categories</a></p>
     <p><a href="quotes-register.php">Register a New Admin</a></p>
-    <p><a href="quotes-admin.php?action=logout">Logout</a></p>
+    <p><a href="admin-index.php?action=logout">Logout</a></p>
 </div>

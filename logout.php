@@ -42,9 +42,7 @@
 
     <body>
         <h1>Thank you for signing out, <?php echo $firstName ?>.</h1>
-        <p>
-            <a href="index.php">Click here</a> to view quotes.
-        </p>
+
         <br>
     </body>
 
