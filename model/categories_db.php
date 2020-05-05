@@ -20,7 +20,7 @@
         $statement->execute();
         $category = $statement->fetch();
         $statement->closeCursor();
-        $category_name = $category['categoryName'];
+        $category_name = $category['categoryName'] ?? 'No Category by ID';
         return $category_name;
     }
 

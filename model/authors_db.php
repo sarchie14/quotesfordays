@@ -20,7 +20,7 @@
         $statement->execute();
         $author = $statement->fetch();
         $statement->closeCursor();
-        $author_name = $author['fullName'];
+        $author_name = $author['fullName'] ?? 'No Name by ID';
         return $author_name;
     }
 
